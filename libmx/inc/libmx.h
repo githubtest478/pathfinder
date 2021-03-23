@@ -7,8 +7,12 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <fcntl.h>
-#include <malloc/malloc.h>
-
+#ifdef __linux__
+    #include <malloc.h>
+    #define malloc_size malloc_usable_size
+#else
+    #include <malloc/malloc.h>
+#endif
 typedef struct s_list {
     void *data;
     struct s_list *next;
