@@ -27,7 +27,7 @@ GFLAGS		= -std=c11 -pipe -Wall -Wextra -Werror -Wpedantic\
 IFLAGS		= $(addprefix -I, $(LIB_INC) $(INC_DIR))
 
 COMPILE		= $(CC) $(GFLAGS) $(IFLAGS) $(LIB_BIN)
-MAKE_M		= make -sf Makefile -C
+MAKE_M		= make -sf makefile -C
 RM			= /bin/rm -rf
 
 all: $(NAME)

@@ -7,12 +7,7 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <fcntl.h>
-#ifdef __linux__
-    #include <malloc.h>
-    #define malloc_size malloc_usable_size
-#else
-    #include <malloc/malloc.h>
-#endif
+#include <malloc/malloc.h>
 #include "libmx.h"
 
 #define ERROR_INVALID_ARGC "usage: ./pathfinder [filename]\n"  //-1
